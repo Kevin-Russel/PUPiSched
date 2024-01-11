@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUP-iSCHED</title>
+    <link rel="icon" href="imagesforbg/412186103_754400549418913_4745714376299520673_n-removebg-preview.png" type="image/png">
+    <style>
+        .body5 {
+    background-color: gray;
+    background-image: url(imagesforbg/frame.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.txt {
+    margin-top: 50px;
+}
+
+.brrw {
+    text-align: center;
+}
+
+.p-s {
+    position: absolute;
+    box-sizing: border-box;
+    width: fit-content;
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 10px;
+    justify-content: center;
+    margin-left: 20%;
+    margin-right: auto;
+    padding: 100px;
+    background: rgba(217, 217, 217, 0.50);
+    border-radius: 10px;
+}
+
+.prjctrA,
+.prjctrB,
+.prjctrC,
+.prjctrD,
+.prjctrE,
+.prjctrF {
+    font-size: larger;
+    background-color: orange;
+    padding: 30px;
+    width: 300px;
+    margin-right: 50px;
+    margin-left: 50px;
+    border-radius: 20px;
+}
+
+.prjctrA:hover,
+.prjctrB:hover,
+.prjctrC:hover,
+.prjctrD:hover,
+.prjctrE:hover,
+.prjctrF:hover {
+    transform: translateY(-10px);
+}
+
+.proj,
+.spea {
+    color: black;
+    text-decoration: none;
+}
+
+.pop-up {
+    width: 400px;
+    height: 450px;
+    background: maroon;
+    border-radius: 6px;
+    position: absolute;
+    margin-top: -50px;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    color: white;
+    text-align: center;
+    padding: 0 30px, 30px;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.pop-up h4 {
+    position: relative;
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+    display: inline-block;
+}
+
+.pop-up .close i {
+    position: absolute;
+    top: 0;
+    right: -70px;
+    color: white;
+    cursor: pointer;
+}
+
+.pop-up button {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background-color: orange;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: solid rgb(255, 191, 0);
+}
+
+.time {
+    position: absolute;
+    margin-left: 30px;
+}
+
+.status {
+    position: absolute;
+    margin-left: 275px;
+    
+}
+
+.btn {
+    position: absolute;
+    margin-top: 260px;
+    margin-left: 25px;
+    width: 350px;
+    text-decoration: none;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
+}
+.blah {
+    text-align: center;
+    margin-top: 50px;
+    font-size: large;
+    font-family: sans-serif;
+    text-shadow: 2px 2px 4px #999;
+}
+
+.btnNiKevs {
+    transition: transform 0.2s ease-in-out;
+}
+.btnNiKevs:active {
+    transform: scale(0.95);
+}
+
+.btn2 {
+
+position: absolute;
+padding: 5px;
+margin-top: 20px;
+height: 75px;
+border: solid black;
+width: 45px;
+background-color: maroon;
+transition: transform 0.2s ease-in-out;
+}
+
+.btn2:active {
+transform: scale(0.95);
+}
+
+.iconNiKevs {
+    position: absolute;
+    margin-top: 48px;
+    margin-left: 13px;
+    color: whitesmoke;
+}
+
+.myBox4 {
+
+padding: 5px;
+border: solid black;
+position: absolute;
+margin-top: 20px;
+margin-left: 55px;
+height: 60px;
+width: 170px;
+background-color:maroon ;
+display: flex;
+justify-content: center;
+color: whitesmoke;
+
+}
+
+a {
+    color: whitesmoke;
+}
+
+    </style>
+    
+    <script src="https://kit.fontawesome.com/0af3c75fad.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="body5">
+
+    <div class="2bx">
+        <div class="backbtn">
+            <!--<a href="4.html"><i class="fa-duotone fa-circle-arrow-left"></i></a>-->
+            <a href="6.html"><button class="btn2" id="btn1ID"></button>
+
+            <div class="iconNiKevs">
+                <i class="fa-solid fa-arrow-left" width="100px" height="100px"></i></a>
+            </div>
+
+            <div class="myBox4"><H3>PROJECTOR</H3></div>
+        </div>
+
+    </div>
+
+    <div class="brrw">
+        <div class="p-s">
+            <button class="prjctrA" onclick="openpopup()">Projector A</button>
+            <button class="prjctrB" onclick="openpopup()">Projector B</button>
+            <button class="prjctrC" onclick="openpopup()">Projector C</button>
+            <button class="prjctrD" onclick="openpopup()">Projector D</button>
+            <button class="prjctrE" onclick="openpopup()">Projector E</button>
+            <button class="prjctrF" onclick="openpopup()">Projector F</button>
+        </div>
+    </div>
+
+    <div class="pop-up" id="popup"> <!-- paayos ng deisgn ng popup-->
+        <h4>Schedules:
+            <div class="close" onclick="closepopup()">
+                <i class="fas fa-times"></i>
+            </div>
+        </h4>
+        <div class="time-status container">
+
+            <div class="time">
+                <p>Time<br>
+                    7:00am - 8:00am <br>
+                    8:00am - 9:00am <br>
+                    9:00am - 10:00am <br>
+                    10:00am - 11:00am <br>
+                    11:00am - 12:00am <br>
+                    12:00am - 1:00pm <br>
+                    1:00am - 2:00am <br>
+                    2:00am - 3:00am <br>
+                    3:00am - 4:00am <br>
+                    4:00am - 5:00am <br>
+                    5:00am - 6:00am <br>
+                    6:00am - 7:00am <br>
+                    7:00am - 8:00am <br>
+                    8:00am - 9:00am
+                </p>
+            </div>
+
+            <div class="status">
+                <p>Status<br>
+                    Available<br>
+                    Not Available <br>
+                    Available <br>
+                    Not Available <br>
+                    Available <br>
+                    Not Available <br>
+                    Available <br>
+                    Not Available <br>
+                    Available <br>
+                    Not Available <br>
+                    Available <br>
+                    Not Available <br>
+                    Available <br>
+                    Not Available
+                </p>
+            </div>
+            
+            <div class="btn"><button class="btnNiKevs"><a href="setschedforequip.html" class="pindotKevs">RESERVE THIS</a></button></div>
+           
+        </div>
+
+
+
+    </div>
+
+    <script>
+        let popup = document.getElementById("popup");
+
+        function openpopup() {
+            popup.classList.toggle("open-popup");
+        }
+
+        function closepopup() {
+            popup.classList.remove("open-popup");
+        }
+    </script>
+
+</body>
+
+</html>

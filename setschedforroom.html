@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://kit.fontawesome.com/0af3c75fad.js" crossorigin="anonymous"></script>
+    <title>PUP-iSCHED</title> 
+    <link rel="icon" href="imagesforbg/412186103_754400549418913_4745714376299520673_n-removebg-preview.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <style>
+
+    body {
+    background-image: url(imagesforbg/2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;   
+    }
+
+
+
+
+.box1 {
+    padding: 5px;
+    border: solid black;
+    border-radius: 10px;
+    position: absolute;
+    background-color: maroon;
+    margin-left: 490px;
+    margin-top: 80px;
+    width: 600px;
+    height: 500px;
+}
+
+.inpt1 {
+    position: absolute;
+    margin-left: 400px;
+    margin-top: 160px;
+    input[type="text"] {
+        width: 300px;
+        padding: 10px;
+    }
+
+    label {
+        font-size: 30px;
+        padding: 130px;
+        font-weight: bold;
+    }
+}
+
+.inpt2 {
+    position: absolute;
+    margin-left: 480px;
+    margin-top: 230px;
+    input[type="text"] {
+        width: 300px;
+        padding: 10px;
+    }
+
+    label {
+        font-size: 30px;
+        padding: 50px;
+        font-weight: bold;
+    }
+}
+
+.inpt3 {
+    position: absolute;
+    margin-left: 510px;
+    margin-top: 300px;
+    input[type="text"] {
+        width: 300px;
+        padding: 10px;
+    }
+
+    label {
+        font-size: 30px;
+        padding: 20px;
+        font-weight: bold;
+    }
+}
+
+.inpt4 {
+    position: absolute;
+    margin-left: 520px;
+    margin-top: 370px;
+    input[type="text"] {
+        width: 300px;
+        padding: 10px;
+    }
+
+    label {
+        font-size: 30px;
+        padding: 11px;
+        font-weight: bold;
+    }
+}
+
+.drpDwn {
+
+    position: absolute;
+    margin-left: 520px;
+    margin-top: 470px;
+    select {
+        width: 110px;
+        padding: 10px;
+        height: 45px;
+    }
+
+    label {
+        font-size: 30px;
+        padding: 11px;
+        font-weight: bold;
+    }
+
+}
+
+.btn {
+    position: absolute;
+    margin-left: 920px;
+    margin-top: 470px;
+    
+    
+
+    button {
+        width: 135px;
+        height: 50px;
+        padding: 10px;
+        background-color: orange;
+        border: solid black;
+        font-weight: bold;
+
+    }
+
+    button {
+        transition: transform 0.2s ease-in-out;
+    }
+
+    button:active {
+        transform: scale(0.95);
+    }
+
+    
+    
+}
+
+
+.btn2 {
+    position: absolute;
+    margin-left: 510px;
+    margin-top: 100px;
+    color: maroon;
+    background-color: black;
+    z-index: 1;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+.btn2 a{
+    text-decoration: none;
+    color: white;
+}
+
+    </style>
+    <script>
+        function getddl() {
+            var selectedValue = formid.ddlselect.value;
+            localStorage.setItem('selectedValue', selectedValue);
+        }
+
+        function goto() {
+            var date = formid.Date.value;
+            var profName = formid['Prof Name'].value;
+            var subjectCode = formid['Subject Code'].value;
+            var subjectName = formid['Subject Name'].value;
+
+            localStorage.setItem('date', date);
+            localStorage.setItem('profName', profName);
+            localStorage.setItem('subjectCode', subjectCode);
+            localStorage.setItem('subjectName', subjectName);
+
+            window.location.href = 'profilepage.html';
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="box1"></div>
+    <form action="" name="formid">
+
+        
+
+        <div class="backbtn">
+            <button class="btn2" id="btn1ID"><a href="4.html">Cancel</a></button>
+        </div>
+
+        
+        <div class="inputContainer">
+
+            <div class="inpt1">
+                <label>Date:</label>
+                <input type="text" name="Date">
+            </div>
+
+            <div class="inpt2">
+                <label>Prof Name:</label>
+                <input type="text" name="Prof Name">
+            </div>
+
+            <div class="inpt3">
+                <label>Subject Code:</label>
+                <input type="text" name="Subject Code">
+            </div>
+
+            <div class="inpt4">
+                <label>Subject Name:</label>
+                <input type="text" name="Subject Name">
+            </div>
+        </div>
+        
+        <div class="drpDwn"><label>Time:</label>
+            <select name="ddlselect" onchange="getddl()">
+                <option value="none">Select time</option>
+                <option value="8-9AM">8AM - 9AM</option>
+                <option value="9-10AM">9AM - 10AM</option>
+                <option value="10-11AM">10AM - 11AM</option>
+                <option value="11-12PM">11AM - 12PM</option>
+                <option value="12PM-1PM">12PM - 1PM</option>
+                <option value="1-2PM">1PM - 2PM</option>
+                <option value="2-3PM">2PM - 3PM</option>
+                <option value="3-4PM">3PM - 4PM</option>
+                <option value="4-5PM">4PM - 5PM</option>
+                <option value="5-6PM">5PM - 6PM</option>
+                <option value="6-7PM">6PM - 7PM</option>
+                <option value="7-8PM">7PM - 8PM</option>
+                <option value="8-9PM">8PM - 9PM</option>
+            </select>
+        </div>
+
+        <div class="btn">
+            <button class="rsrv rsrv-rm" type="button" onclick="goto()">Reserve this room</button>
+        </div>
+        
+        
+        
+    </form>
+</body>
+</html>

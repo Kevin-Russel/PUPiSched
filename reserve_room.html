@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUP-iSCHED</title>
+    <link rel="icon" href="imagesforbg/412186103_754400549418913_4745714376299520673_n-removebg-preview.png" type="image/png">
+    <style>
+body {
+    background-image: url(imagesforbg/frame.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;   
+}
+.tab-link, .link {
+    cursor: pointer;
+}
+
+.tab-floor, .content {
+    display: none;
+}
+
+.tab-floor.active-con, .content.active-con{
+    display: block;
+}
+.title h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: sans-serif;
+    text-shadow: 2px 2px 4px #999;
+}
+.floorname, .linkers{
+    cursor: pointer;
+}
+.floorname h2, .linkers h4{
+    display: inline;
+    margin-left: 30%;
+    color: white;
+    font-family: sans-serif;
+    text-shadow: 2px 2px 4px #999;
+}
+.floor h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 3%;
+    color: white;
+    font-family: sans-serif;
+    text-shadow: 2px 2px 4px #999;
+}
+.btn1 {
+    border: solid black;
+    background-color: maroon;
+    padding: 5px;
+    width: 120px;
+    height: 100px;
+    margin-top: 390px;
+    margin-left: 180px;
+    position: absolute;
+    color: white;
+    
+}
+.btn2 {
+    border: solid black;
+    background-color: maroon;
+    padding: 5px;
+    width: 120px;
+    height: 100px;
+    margin-top: 390px;
+    margin-left: 310px;
+    position: absolute;
+    color: white;  
+}
+.btn2f {
+    border: solid black;
+    background-color: green;
+    padding: 5px;
+    width: 120px;
+    height: 100px;
+    margin-top: 390px;
+    margin-left: 310px;
+    position: absolute; 
+}
+.pop-up{
+    width: 400px;
+    background: maroon;
+    color: white;
+    border-radius: 6px;
+    position: absolute;
+    margin-top: -5%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+.linkers1{
+    position: absolute;
+    margin-left: 20px;
+    top: 10px;
+}
+.linkers2{
+    position: absolute;
+    margin-left: 260px;
+    top: 10px;
+    
+}
+.line {
+    position: absolute;
+    width: 400px;
+    margin: 5px;
+}
+.contents {
+    margin-top:30px;
+}
+.pop-up .close{
+    display: flex;
+    align-items: left;
+    margin-top: 10px;
+    margin-left: -10px;
+}
+.pop-up span.spacer {
+    margin-left: 10%;
+}
+.openpop-up{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+.rsvBtn {
+    background-color: #FFA800;
+    border: solid black;
+}
+.btn3 {
+    border: solid black;
+    background-color: green;
+    padding: 5px;
+    width: 120px;
+    height: 100px;
+    margin-top: 390px;
+    margin-left: 440px;
+    position: absolute;
+}
+.btn4 {
+    border: solid black;
+    background-color: green;
+    padding: 5px;
+    width: 120px;
+    height: 100px;
+    margin-top: 390px;
+    margin-left: 715px;
+    position: absolute;
+}
+.btn4f {
+    border: solid black;
+    background-color: maroon;
+    padding: 5px;
+    width: 120px;
+    height: 100px;
+    margin-top: 390px;
+    margin-left: 715px;
+    position: absolute;
+    color: white;
+}
+.btn5 {
+    border: solid black;
+    background-color: green;
+    padding: 5px;
+    width: 120px;
+    height: 100px;
+    margin-top: 390px;
+    margin-left: 845px;
+    position: absolute;
+}
+.btn6 {
+    border: solid black;
+    background-color: green;
+    padding: 5px;
+    width: 120px;
+    height: 100px;
+    margin-top: 390px;
+    margin-left: 975px;
+    position: absolute;
+}
+.btn7 {
+    border: solid black;
+    background-color: green;
+    padding: 5px;
+    width: 120px;
+    height: 100px;
+    margin-top: 200px;
+    margin-left: 155px;
+    position: absolute;
+}
+.btn7f {
+    border: solid black;
+    background-color: maroon;
+    padding: 5px;
+    width: 120px;
+    height: 100px;
+    margin-top: 200px;
+    margin-left: 155px;
+    position: absolute;
+    color: white;
+}
+.btn8 {
+    border: solid black;
+    background-color: green;
+    padding: 5px;
+    width: 120px;
+    height: 100px;
+    margin-top: 90px;
+    margin-left: 155px;
+    position: absolute;
+}
+.btn9 {
+    border: solid black;
+    background-color: green;
+    padding: 5px;
+    width: 120px;
+    height: 100px;
+    margin-top: -20px;
+    margin-left: 155px;
+    position: absolute;
+}
+.btn10 {
+    border: solid black;
+    background-color: green;
+    padding: 5px;
+    width: 120px;
+    height: 100px;
+    margin-top: 200px;
+    margin-left: 1000px;
+    position: absolute;
+}
+.btn11 {
+    border: solid black;
+    background-color: green;
+    padding: 5px;
+    width: 120px;
+    height: 100px;
+    margin-top: 90px;
+    margin-left: 1000px;
+    position: absolute;
+}
+.btn12 {
+    border: solid black;
+    background-color: green;
+    padding: 5px;
+    width: 120px;
+    height: 100px;
+    margin-top: -20px;
+    margin-left: 1000px;
+    position: absolute;
+}
+.myBox1 {
+    border: solid black;
+    background-color:rgb(226, 219, 219);
+    padding: 5px;
+    width: 950px;
+    height: 100px;
+    margin-top: 340px;
+    margin-left: 155px;
+    position: absolute;
+}
+.myBox2 {
+    border: none;
+    background-color: maroon;
+    padding: 5px;
+    width: 125px;
+    height: 100px;
+    margin-top: 410px;
+    margin-left: 570px;
+    position: absolute;
+}
+.myBox3 {
+    border: none;
+    background-color: maroon;
+    padding: 5px;
+    width: 122px;
+    height: 70px;
+    margin-top: 285px;
+    margin-left: 570px;
+    position: absolute;
+}
+.myBox4 {
+    border: none;
+    background-color: maroon;
+    padding: 5px;
+    width: 122px;
+    height: 125px;
+    border-radius: 100px;
+    margin-top: 230px;
+    margin-left: 570px;
+    position: absolute;
+}
+.myBox5 {
+    border: solid black;
+    background-color:rgb(226, 219, 219);
+    padding: 5px;
+    height: 20px;
+    width: 40px;
+    margin-top: 303px;
+    margin-left: 155px;
+    position: absolute;
+}
+.myBox6 {
+    border: solid black;
+    background-color:rgb(226, 219, 219);
+    padding: 5px;
+    height: 20px;
+    width: 10px;
+    margin-top: 303px;
+    margin-left: 212px;
+    position: absolute;
+}
+.myBox7 {
+    border: solid black;
+    background-color:rgb(226, 219, 219);
+    padding: 5px;
+    height: 8px;
+    width: 27px;
+    margin-top: 303px;
+    margin-left: 233.7px;
+    position: absolute;
+}
+.myBox8 {
+    border: solid black;
+    background-color:rgb(226, 219, 219);
+    padding: 5px;
+    height: 20px;
+    width: 40px;
+    margin-top: 303px;
+    margin-left: 1065px;
+    position: absolute;
+}
+.myBox9 {
+    border: solid black;
+    background-color:rgb(226, 219, 219);
+    padding: 5px;
+    height: 20px;
+    width: 10px;
+    margin-top: 303px;
+    margin-left: 1038px;
+    position: absolute;
+}
+.myBox10 {
+    border: solid black;
+    background-color:rgb(226, 219, 219);
+    padding: 5px;
+    height: 8px;
+    width: 27px;
+    margin-top: 303px;;
+    margin-left: 999Px;
+    position: absolute;
+}
+.floor1contents {
+    transition: transform 0.2s ease-in-out;
+    
+}
+.btn1:active, .btn2:active, .btn3:active, .btn4:active, .btn5:active, .btn6:active, 
+.btn7:active, .btn8:active, .btn9:active, .btn10:active, .btn11:active, .btn12:active,
+.btn4f:active, .btn7f:active, .btn2f:active, .rsvBtn:active
+{
+    transform: scale(0.95);
+}
+.fontStyles {
+    position: absolute;
+    margin-left: 515px;
+    margin-top: 100px;
+    color: white;
+    font-family: sans-serif;
+    text-shadow: 2px 2px 4px #999;
+}
+.fl1, .fl1Box, .fl2, .fl2box {
+    margin-left: 8%;
+}
+.iconNiKevs {
+    position: absolute;
+    margin-top:  20px;
+    margin-left: 15px;
+    color: whitesmoke;
+
+}
+.fa-solid {
+    font-size: 30px;
+    color: black;
+}
+
+    </style>
+    <script src="https://kit.fontawesome.com/0af3c75fad.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="bckbtn">
+        <a href="4.html">
+
+            <div class="iconNiKevs">
+                <i class="fa-solid fa-arrow-left" width="100px" height="100px"></i></a>
+            </div>
+    </div>
+    
+    <div class="title"> <!-- pagitna rin lahat ng buttons, panget tignan pag hindi nakagitna -->
+        <h1>Select Floor</h1>
+    </div>
+
+    <div class="floorname">
+        <h2 class="tab-link active" onclick="opentab('floor1')">Floor 1</h2>
+        <h2 class="tab-link" onclick="opentab('floor2')">Floor 2</h2>
+        <hr>
+    </div>
+   
+    <div class="tab-floor active-con" id="floor1">
+
+        <div class="floor" >
+            <h2>First Floor</h2> <!-- eto ibaba mo sa gitna-->
+        </div>
+
+        <div class="fl1Box">
+            <!--hallway-->
+            <div class="myBox1"></div>
+
+            <!--ARC AND BOTTOM PART-->
+            <div class="myBox2"></div>
+            <div class="myBox3"></div>
+            <div class="myBox4"></div>
+        
+            <!--STAIRS LEFT SIDE-->
+            <div class="myBox5"></div>
+            <div class="myBox6"></div>
+            <div class="myBox7"></div>
+
+             <!--STAIRS RIDE SIDE-->
+            <div class="myBox8"></div>
+            <div class="myBox9"></div>
+            <div class="myBox10"></div>
+        </div>
+
+        
+
+        <div class="fl1">
+            <!--LOWER ROOM BUTTONS--><!-- patanggal lahat ng anchor tags-->
+            <button class="btn1" id="btn1ID">Student Services</button>
+            <button class="btn2f" id="btn1ID"onclick="openpopup()">CHTM LAB</button>
+            <button class="btn3" id="btn1ID"onclick="openpopup()">AVR Room</button>
+        
+            <button class="btn4f" id="btn1ID">CASHIER<a href=""></a></button>
+            <button class="btn5" id="btn1ID"onclick="openpopup()">ROOM 5</button>
+            <button class="btn6" id="btn1ID"onclick="openpopup()">ROOM 7</button>
+
+            <!--UPPER LEFT ROOM BUTTONS-->
+            <button class="btn7f" id="btn1ID">REGISTRAR<a href=""></a></button>
+            <button class="btn8" id="btn1ID"onclick="openpopup()">COM LAB 1</button>
+            <button class="btn9" id="btn1ID"onclick="openpopup()">COM LAB 2</button>
+
+            <!--UPPER RIGHT ROOM-->
+            <button class="btn10" id="btn1ID"onclick="openpopup()">ROOM 8</button>
+            <button class="btn11" id="btn1ID"onclick="openpopup()">ROOM 9</button>
+            <button class="btn12" id="btn1ID"onclick="openpopup()">CHEM LAB</button>
+                   
+        </div>
+    </div>
+    <div class="tab-floor" id="floor2">
+        <div class="floor" >
+            <h2>Second Floor</h2><!-- eto ibaba mo sa gitna-->
+        </div>
+        
+        <div class="fl2box">
+             <!--hallway-->
+            <div class="myBox1"></div>
+
+             <!--ARC AND BOTTOM PART-->
+            <div class="myBox2"></div>
+            <div class="myBox3"></div>
+             <div class="myBox4"></div>
+        
+            <!--STAIRS LEFT SIDE-->
+            <div class="myBox5"></div>
+            <div class="myBox6"></div>
+            <div class="myBox7"></div>
+
+            <!--STAIRS RIDE SIDE-->
+            <div class="myBox8"></div>
+            <div class="myBox9"></div>
+            <div class="myBox10"></div>
+        </div>
+
+        <div class="fl2">
+            <!--LOWER ROOM BUTTONS--> <!-- patanggal lahat ng anchor tags-->
+            <button class="btn1" id="btn1ID">LIBRARY</button>
+            <button class="btn2" id="btn1ID">LIBRARY</button>
+            <button class="btn3" id="btn1ID"onclick="openpopup()">ROOM 1</button>
+            <button class="btn4" id="btn1ID"onclick="openpopup()">ROOM 3</button>
+            <button class="btn5" id="btn1ID"onclick="openpopup()">ROOM 5</button>
+            <button class="btn6" id="btn1ID"onclick="openpopup()">ROOM 7</button>
+
+            <!--UPPER LEFT ROOM BUTTONS-->
+            <button class="btn7" id="btn1ID"onclick="openpopup()">ROOM 2</button>
+            <button class="btn8" id="btn1ID"onclick="openpopup()">ROOM 4</button>
+            <button class="btn9" id="btn1ID"onclick="openpopup()">ROOM 6</button>
+
+            <!--UPPER RIGHT ROOM-->
+            <button class="btn10" id="btn1ID"onclick="openpopup()">ROOM 8</button>
+            <button class="btn11" id="btn1ID"onclick="openpopup()">ROOM 9</button>
+            <button class="btn12" id="btn1ID"onclick="openpopup()">ROOM 10</button>
+                   
+        </div>
+    </div>
+    </div>
+
+    <div class="pop-up" id="popup"> <!-- paayos ng deisgn ng popup-->
+        <div class="close" onclick="closepopup()">
+            <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+
+        <div class="linkers">
+            <div class="linkers1"><h4 class="link active" onclick="openpopuptab('con1')">Specification:</h4></div>
+            <div class="linkers2"><h4 class="link" onclick="openpopuptab('con2')">Schedules:</h4></div>
+            
+            <div class="line"><hr></div>
+        </div>
+        
+        <div class="contents">
+            <div class="content active-con" id="con1">
+                <p>No. of Chairs - 50 <br>
+                    No. of Table - 2 <br>
+                    No. of Sockets - 3 <br>
+                    No. of White board Marker - 3 <br></p>
+            </div>
+
+            <div class="content" id="con2">
+                <p>Time<br>
+                    7:00am - 8:00am <br>
+                    8:00am - 9:00am <br>
+                    9:00am - 10:00am <br>
+                    10:00am - 11:00am <br>
+                    11:00am - 12:00am <br>
+                    12:00am - 1:00pm <br>
+                    1:00am - 2:00am <br>
+                    2:00am - 3:00am <br>
+                    3:00am - 4:00am <br>
+                    4:00am - 5:00am <br>
+                    5:00am - 6:00am <br>
+                    6:00am - 7:00am <br>
+                    7:00am - 8:00am <br>
+                    8:00am - 9:00am
+                </p>
+            </div>           
+        </div>
+        <div class="button">
+            <button class="rsvBtn"><a href="setschedforroom.html">Reserve this</a></button>
+        </div>
+    </div>
+    
+    
+    <script>
+        // lalo to, wag nyo gagalawin. 
+        var tablink = document.getElementsByClassName('tab-link');
+        var tabfloor = document.getElementsByClassName('tab-floor');
+
+        function opentab(floor_num) {
+            for (var i = 0; i < tablink.length; i++) {
+                tablink[i].classList.remove("active");
+            }
+            for (var i = 0; i < tabfloor.length; i++) {
+                tabfloor[i].classList.remove("active-con");
+            }
+            event.currentTarget.classList.add("active");
+            document.getElementById(floor_num).classList.add("active-con");
+        }
+
+        let popup = document.getElementById("popup");
+        function openpopup(){
+            popup.classList.add("openpop-up");
+        }
+
+        function closepopup(){
+            popup.classList.remove("openpop-up");
+        }
+
+        var links = document.querySelectorAll('.link');
+        var contents = document.querySelectorAll('.content');
+
+        function openpopuptab(clicks) {
+            for (var i = 0; i < links.length; i++) {
+                links[i].classList.remove("active");
+            }
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].classList.remove("active-con");
+            }
+            event.currentTarget.classList.add("active");
+            document.getElementById(clicks).classList.add("active-con");
+        }
+// ako lang gagalaw dito, iiyak ako pag may ginalaw ka dito hahahahahhaha 
+    </script>
+</body>
+</html>

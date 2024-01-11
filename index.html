@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUP-iSCHED</title>
+    <link rel="stylesheet" href="iSCHED.css">
+    <link rel="icon" href="imagesforbg/412186103_754400549418913_4745714376299520673_n-removebg-preview.png" type="image/png">
+    
+    <style>
+        .body1 {
+    position: relative;
+    color: antiquewhite;
+    width: 100%;
+    height: 100%;
+}
+.body1::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url(imagesforbg/iSCHED_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(5px); 
+}
+.anywhere {
+    position: fixed;
+    color: antiquewhite;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+.wlcm {
+    text-align: center;
+    margin-top: 300px;
+}
+.clck {
+    text-align: center;
+    margin-top: 225px;
+}
+.wlcm {
+    font-size: 50px;
+}
+.clck {
+    font-size: 30px;
+}
+    </style>
+</head>
+<body class="body1">
+
+    <a href="2.html" class="anywhere">
+    <div class="welcome">
+        <h1 class="wlcm">Welcome to PUPSMB-iSCHED</h1>
+        <h3 class="clck">Click anywhere to continue</h3>
+    </div>
+    </a>
+
+    <script>
+        function click(){
+            window.location.href = '2.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUP-iSCHED</title>
+    <link rel="icon" href="imagesforbg/412186103_754400549418913_4745714376299520673_n-removebg-preview.png" type="image/png">
+    <style>
+        .body4 {
+    background-image: url(imagesforbg/desktop5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.blah {
+    background-color: brown;
+    width: 400px;
+    height: 75px;
+    margin-top: 50px;
+    padding: 1px;
+    text-align: center;
+    color: antiquewhite;
+}
+
+.choose {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.room, .equipment, .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 200px;
+    border: 5px;
+    background: rgba(217, 217, 217, 0.50);
+    text-align: center;
+    padding: 30px;
+    margin-top: 150px;
+    border-radius: 10px;
+}
+.room:hover, .equipment:hover, .profile:hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+    </style>
+</head>
+<body class="body4">
+
+    <div class="blah">
+        <h1>How can I help you?</h1>
+    </div>
+
+    <div class="choose">
+        <div class="room" onclick="clicks_room()">
+            <img src="imagesforbg/icon/icon1.png" width="100px" height="100px">
+            <p class="potaragis1">To reserve room for your classes, click here. </p>
+           
+        </div>
+    
+        <div class="equipment" onclick="clicks_equipment()">
+            <img src="imagesforbg/icon/icon2.png" width="100px" height="100px">
+            <p class="potaragis2">To reserve equipment for your classes, click here. </p>
+            
+        </div>
+    
+        <div class="profile" onclick="clicks_profile()">
+            <img src="imagesforbg/icon/icon3.png" width="100px" height="100px">
+            <p class="potaragis3">To edit your user profile, click here. </p>
+        </div>
+    </div>
+    
+    <script>
+        function clicks_room(){
+            window.location.href = "reserve_room.html";
+        }
+        function clicks_equipment(){
+            window.location.href = "6.html";
+        }
+        function clicks_profile(){
+            window.location.href = "profilepage.html";
+        }
+    </script>
+</body>
+</html>
